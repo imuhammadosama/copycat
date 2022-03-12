@@ -7,7 +7,7 @@ app.use(cors()); // We're telling express to use CORS
 app.use(express.json()); // we need to tell server to use json as well
 
 app.get('/', (req, res) => {
-  res.send('API is working!');
+  res.send('DUM DUM');
 });
 
 app.listen(process.env.PORT || 4000, () => {
