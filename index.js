@@ -1,8 +1,7 @@
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
-
-require('dotenv').config();
 
 app.use(cors()); // We're telling express to use CORS
 app.use(express.json()); // we need to tell server to use json as well
