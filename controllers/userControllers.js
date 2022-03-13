@@ -30,6 +30,6 @@ export function uploadFile(req, res) {
   const url = 'file:///Users/osama/Documents/Projects/copycat/public';
   res.status(200).json({
     success: 'Success',
-    file: `${req.file.filename}`,
+    file: `${req.file.path}`,
   });
 }
