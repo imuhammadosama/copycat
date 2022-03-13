@@ -23,7 +23,8 @@ export default function Home() {
         'content-type': 'multipart/form-data',
       },
     };
-    const url = 'http://localhost:4000/user/upload/';
+    // const url = 'http://localhost:4000/user/upload/';
+    const url = 'https://copycat-imuhammadosama.herokuapp.com/user/upload';
 
     axios
       .post(url, formData, config)

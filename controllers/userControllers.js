@@ -27,9 +27,8 @@ export let uploadImage = upload.single('photo');
 
 export function uploadFile(req, res) {
   console.log(req.file);
-  const url = 'file:///Users/osama/Documents/Projects/copycat/public';
   res.status(200).json({
     success: 'Success',
-    file: `${req.file.path}`,
+    file: `${req.file.filename}`,
   });
 }

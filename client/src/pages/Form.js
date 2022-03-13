@@ -9,11 +9,9 @@ export default function Form(props) {
   const { search } = useLocation();
   useEffect(() => {
     const searchParams = new URLSearchParams(search);
-    setFile(
-      `/Users/osama/Documents/Projects/copycat/public/${searchParams.get(
-        'file'
-      )}`
-    );
+    // const url = 'http://localhost:4000/public/';
+    const url = 'https://copycat-imuhammadosama.herokuapp.com/public/';
+    setFile(`${url}${searchParams.get('file')}`);
   }, []);
 
   const sendEmail = (e) => {
@@ -46,6 +44,7 @@ export default function Form(props) {
         <input type='email' name='email' />
         <label>Message</label>
         <textarea name='message' />
+        <input type='url' name='image' value={file} />
         <input type='submit' value='Send' />
       </form>
       <img src={file} />

@@ -8,7 +8,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route exact path='/copycat' element={<Home />} />
         <Route exact path='/form' element={<Form />} />
         <Route exact path='/thankyou' element={<ThankYou />} />
         <Route exact path='/image' element={<DisplayImage />} />
