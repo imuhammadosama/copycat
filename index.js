@@ -4,6 +4,8 @@ import cors from 'cors';
 
 const app = express();
 app.use(cors());
+app.use(express.static('public'));
+app.use('/public', express.static('public'));
 app.use('/user', userUpload);
 
 app.listen(process.env.PORT || 4000, () => {
