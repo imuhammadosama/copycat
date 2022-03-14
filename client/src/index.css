@@ -8,7 +8,7 @@
 body {
   margin: 0;
   font-family: 'copycat', sans-serif;
-  /* font-weight: bold; */
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -62,7 +62,7 @@ code {
 
 .flex-item {
   flex-grow: 0;
-  padding: 5% 10%;
+  margin: 0% 10%;
 }
 
 .homework {
@@ -122,6 +122,7 @@ input:-internal-autofill-selected {
 
 input {
   font-family: 'copycat';
+  font-weight: bold;
   font-size: 24px;
   color: black !important;
   padding-left: 20px !important;

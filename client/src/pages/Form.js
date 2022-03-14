@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+
 import submitButton from '../assets/submit-button.svg';
+import submitHover from '../assets/submit-hover.svg';
+
 import Navbar from '../components/Navbar';
 import gif from '../assets/submitting.gif';
 export default function Form(props) {
@@ -12,6 +15,13 @@ export default function Form(props) {
   const [submitting, setSubmitting] = useState(false);
   const { search } = useLocation();
   useEffect(() => {
+    let submitBtn = document.getElementById('submitButton');
+    submitBtn.onmouseover = function () {
+      document.getElementById('submitButton').src = submitHover;
+    };
+    submitBtn.onmouseout = function () {
+      document.getElementById('submitButton').src = submitButton;
+    };
     const searchParams = new URLSearchParams(search);
     // const url = 'http://localhost:4000/public/';
     const url = 'https://copycat-imuhammadosama.herokuapp.com/public/';
@@ -20,7 +30,7 @@ export default function Form(props) {
   }, []);
 
   function submitForm() {
-    document.getElementById('submitButton').click();
+    document.getElementById('submitButtonInput').click();
   }
 
   const sendEmail = (e) => {
@@ -58,6 +68,16 @@ export default function Form(props) {
       <Navbar />
       <div className='flex center'>
         <form ref={form} onSubmit={sendEmail} className='flex-item'>
+          <p
+            style={{
+              textAlign: 'left',
+              fontSize: '50px',
+              margin: '-25px',
+              color: 'red',
+            }}
+          >
+            *
+          </p>
           <div class='input-container'>
             <input
               type='text'
@@ -68,6 +88,16 @@ export default function Form(props) {
             />
           </div>
           <br />
+          <p
+            style={{
+              textAlign: 'left',
+              fontSize: '50px',
+              margin: '-25px',
+              color: 'red',
+            }}
+          >
+            *
+          </p>
           <div class='input-container'>
             <input
               type='email'
@@ -79,6 +109,16 @@ export default function Form(props) {
           </div>
 
           <br />
+          <p
+            style={{
+              textAlign: 'left',
+              fontSize: '50px',
+              margin: '-25px',
+              color: 'red',
+            }}
+          >
+            *
+          </p>
           <div class='input-container'>
             <input
               type='number'
@@ -95,12 +135,17 @@ export default function Form(props) {
             value={file}
             className='display-none'
           />
-          <img src={submitButton} className='pointer' onClick={submitForm} />
+          <img
+            src={submitButton}
+            className='pointer'
+            onClick={submitForm}
+            id='submitButton'
+          />
           <input
             type='submit'
             value='Send'
             className='display-none'
-            id='submitButton'
+            id='submitButtonInput'
           />
         </form>
 

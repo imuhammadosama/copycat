@@ -4,7 +4,9 @@ import axios from 'axios';
 
 import Navbar from '../components/Navbar';
 import upload from '../assets/upload.svg';
+import uploadHover from '../assets/upload-hover.svg';
 import select from '../assets/select.svg';
+import selecthover from '../assets/select-hover.svg';
 import gif from '../assets/uploading.gif';
 
 export default function Home() {
@@ -13,6 +15,20 @@ export default function Home() {
   const [imageLoading, setImageLoading] = useState(false);
 
   useEffect(() => {
+    let selectButton = document.getElementById('selectbtn');
+    selectButton.onmouseover = function () {
+      document.getElementById('selectbtn').src = selecthover;
+    };
+    selectButton.onmouseout = function () {
+      document.getElementById('selectbtn').src = select;
+    };
+    let uploadImage = document.getElementById('upload');
+    uploadImage.onmouseover = function () {
+      document.getElementById('upload').src = uploadHover;
+    };
+    uploadImage.onmouseout = function () {
+      document.getElementById('upload').src = upload;
+    };
     if (selectImage) {
       console.log('Yes');
       document.getElementById('file-submit').click();
@@ -63,6 +79,7 @@ export default function Home() {
       </div>
     );
   }
+
   return (
     <div>
       <Navbar />
@@ -71,6 +88,7 @@ export default function Home() {
       </div>
       <div className='center py-32'>
         <img
+          id='upload'
           className='center pointer upload-button'
           src={upload}
           onClick={fileUpload}
@@ -92,6 +110,7 @@ export default function Home() {
       </form>
       <div className='center py-32'>
         <img
+          id='selectbtn'
           className='center pointer select-button'
           src={select}
           onClick={fileUpload}
