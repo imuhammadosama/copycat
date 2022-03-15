@@ -18,7 +18,7 @@ export default function ThankYou() {
     <div>
       <Navbar />
       <div className='flex'>
-        <div className='t-64 pr-120 flex-item'>
+        <div className='t-80 pr-120 flex-item'>
           thanks, we will txt <br />
           you answers to <br />
           your homework! <br />- copycat

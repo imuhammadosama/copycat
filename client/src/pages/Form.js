@@ -71,7 +71,7 @@ export default function Form(props) {
           <p
             style={{
               textAlign: 'left',
-              fontSize: '50px',
+              fontSize: '72px',
               margin: '-25px',
               color: 'red',
             }}
@@ -91,7 +91,7 @@ export default function Form(props) {
           <p
             style={{
               textAlign: 'left',
-              fontSize: '50px',
+              fontSize: '72px',
               margin: '-25px',
               color: 'red',
             }}
@@ -112,7 +112,7 @@ export default function Form(props) {
           <p
             style={{
               textAlign: 'left',
-              fontSize: '50px',
+              fontSize: '72px',
               margin: '-25px',
               color: 'red',
             }}

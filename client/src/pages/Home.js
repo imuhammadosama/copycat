@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className='center t-48 mobile-padding'>
+      <div className='center t-72 mobile-padding'>
         we will do your math homework for you
       </div>
       <div className='center py-32'>
@@ -94,8 +94,8 @@ export default function Home() {
           onClick={fileUpload}
         />
       </div>
-      <div className='center t-32'>1. take a photo of your homework</div>
-      <div className='center t-32'>2. drag and drop your photo here</div>
+      <div className='center t-56'>1. take a photo of your homework</div>
+      <div className='center t-56'>2. drag and drop your photo here</div>
       {/* Form */}
       <form onSubmit={onFormSubmit}>
         <input
